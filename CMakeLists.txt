@@ -32,3 +32,13 @@ if(MODBUS_EXAMPLE)
     add_executable(ex example/main.cpp)
     target_link_libraries(ex PUBLIC Modbus_Core)
 endif()
+
+install(TARGETS Modbus_Core
+    ARCHIVE DESTINATION lib
+    LIBRARY DESTINATION lib
+    RUNTIME DESTINATION bin
+)
+
+install(DIRECTORY include/
+    DESTINATION include
+)
